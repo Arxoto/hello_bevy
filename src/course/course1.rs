@@ -13,10 +13,6 @@
 //!   - Bevy 中所有模块都以插件的形式实现 如 UI 渲染 等等
 //! - Resource
 //!   - 资源 全局唯一、全局共享的数据
-//! 
-//! todo
-//! 
-//! - 与 UE 的设计框架 GameFeatures(or the earlier: GamePlay) 对比，各个模块分属哪里
 
 use bevy::prelude::*;
 
