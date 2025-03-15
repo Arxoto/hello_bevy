@@ -49,7 +49,7 @@
 //! World 由 一个 PersistentLevel 和 多个 subLevels 组成
 //! 
 //! 
-//! ## 世界之上的底层原理 WorldContext & GameInstance & Engine
+//! ## 世界之上的顶层设计 WorldContext & GameInstance & Engine
 //! 
 //! ### WorldContext
 //! 
@@ -183,22 +183,18 @@
 //! 
 //! ### Model数据、Controller逻辑、View表现
 //! 
-//! 按照MVC的思想
-//! - GameEngine、GameInstance、WorldContext、World、Level、Actor、Pawn 均属于表现
-//! - Player
-//! 
 //! ```txt
-//! View表现      Controller逻辑          Model数据
+//! View表现          Controller逻辑          Model数据
 //! 
 //! GameEngine
-//! GameInstance ------------------------ SaveGame
-//!              - Player 
-//! WorldContext    |
-//! World ----------|------- GameMode ----------- GameState
-//! Level ----------|------- LevelScript   |   |
-//!       ----------|----------------------|- WorldSettings
-//! Pawn --------- Controller ----------- PlayerState
-//! Actor ------------------ Component
+//! GameInstance --------------------------- SaveGame
+//!              -- Player 
+//! WorldContext     |
+//! World -----------|------- GameMode ------------- GameState
+//! Level -----------|------- LevelScript     |   |
+//!       -----------|------------------------|- WorldSettings
+//! Pawn ---------- Controller ------------- PlayerState
+//! Actor ------------------- Component
 //! ```
 //! 
 //! 
@@ -282,5 +278,5 @@
 //! GFCM 内部的实现还是蛮复杂和精巧的，可以做到在一个GF激活后，会把激活前已经存在场景中Actor，还有激活后新生成的Actor，都会被正确的添加上Component。
 //! 
 //! 注意：只有那些调用了AddReceiver的Actor才可以正常的被AddComponents
-//! - todo https://zhuanlan.zhihu.com/p/492893002
+//! - todo <https://zhuanlan.zhihu.com/p/492893002>
 //! 
