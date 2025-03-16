@@ -2,6 +2,7 @@
 //!
 //! - course 0: Build project [`main`]
 //! - course 1: Hello ECS [`crate::course::course1`]
+//! - course ue: UE 设计哲学 [`crate::course::course_ue`]
 
 mod course;
 
