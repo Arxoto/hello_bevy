@@ -6,9 +6,9 @@
 //! 
 //! 1. InsideUE4 GamePlay [`course_ue_gameplay`]
 //! 1. InsideUE5 GameFeatures [`course_ue_gamefeatures`]
+//! 1. InsideGAS [`course_ue_gameabilitysystem`]
 //! 
-//! todo list
-//! - GameAbilitySystem 技能框架
 
 pub mod course_ue_gameplay;
 pub mod course_ue_gamefeatures;
+pub mod course_ue_gameabilitysystem;
